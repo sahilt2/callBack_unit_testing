@@ -24,6 +24,6 @@ function printData(data){
 
 search(printData);
 }
-catch{
-    
+catch(err){
+    console.log(err);    
 }

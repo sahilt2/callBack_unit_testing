@@ -4,6 +4,17 @@
 function printNiceText(text,cb){
     cb(text)
 }
+// printNiceText('more text', text=>{
+//     console.log('###########');
+//     console.log(text);
+//     console.log('###########');
+// });
+
+function print(text){
+    console.log('***************');
+    console.log(text);
+    console.log('***************');
+}
 
 printNiceText('some additional text',print);
 
@@ -11,7 +22,7 @@ function printWhenReady(text,cb) {
     setTimeout(()=>cb(text),Math.random()*3000);
 }
 
-printWhenReady('XYZ',console.log);
+printWhenReady('xyz',console.log);
 printNiceText('some more additional text',print);
 
 function returnNiceText(text,cb) {
@@ -22,7 +33,7 @@ function returnNiceText(text,cb) {
 
 console.log(returnNiceText('testing nice text', text=>text.toUpperCase()));
 
-printWhenReady(returnNiceText('net text',text=>text.toUpperCase()),console.log);
+printWhenReady(returnNiceText('new text',text=>text.toUpperCase()),console.log);
 
 function decorator(text){
     return `* ${text} *`;

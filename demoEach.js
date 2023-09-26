@@ -24,7 +24,7 @@ const t = [
     [4,5,6]
 ];
 
-testAll(t)('XYZ',(a,b,c)=>console.log(a,b,c));
+testAll(t)('xyz',(a,b,c)=>console.log(a,b,c));
 
 const a=testAll(t);
 a('qwe',(a,b,c)=>console.log(a,b,c));
